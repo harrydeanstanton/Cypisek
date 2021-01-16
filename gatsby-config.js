@@ -1,24 +1,48 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
-    title: "Cypisek Nursery",
+    title: 'Cypisek Nursery',
   },
   plugins: [
-    "gatsby-plugin-styled-components",
+    'gatsby-plugin-styled-components',
     {
-      resolve: "gatsby-plugin-manifest",
+      resolve: 'gatsby-plugin-manifest',
       options: {
-        icon: "src/images/icon.png",
+        icon: 'src/images/icon.png',
       },
     },
-    "gatsby-transformer-remark",
-    "gatsby-plugin-mdx",
+    'gatsby-transformer-remark',
+    'gatsby-plugin-mdx',
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
-      resolve: "gatsby-source-filesystem",
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: 'pages',
+        path: './src/images/',
       },
-      __key: "pages",
+    },
+    {
+      resolve: `@ccalamos/gatsby-source-googlemaps-static`,
+      options: {
+        key: process.env.GOOGLE_MAPS_STATIC_API_KEY,
+        styles: [
+          {
+            feature: `poi`,
+            element: `labels`,
+            rules: {
+              visibility: `off`,
+            },
+          },
+        ],
+        maps: [
+          {
+            center: `48.461470,-123.297833`,
+          }
+        ],
+        query: `GOOGLE_MAPS_URL_QUERY`,
+      },
     },
   ],
 };
