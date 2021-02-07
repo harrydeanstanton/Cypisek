@@ -18,7 +18,6 @@
   },
   "license": "0BSD",
   "dependencies": {
-    "@ccalamos/gatsby-source-googlemaps-static": "^2.2.1",
     "@fortawesome/fontawesome-svg-core": "^1.2.32",
     "@fortawesome/free-solid-svg-icons": "^5.15.1",
     "@fortawesome/react-fontawesome": "^0.1.14",
