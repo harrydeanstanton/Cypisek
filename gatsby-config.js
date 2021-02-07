@@ -1,5 +1,3 @@
-require('dotenv').config();
-
 module.exports = {
   siteMetadata: {
     title: 'Cypisek Nursery',
@@ -26,7 +24,7 @@ module.exports = {
     {
       resolve: `@ccalamos/gatsby-source-googlemaps-static`,
       options: {
-        key: process.env.GOOGLE_MAPS_STATIC_API_KEY,
+        key: 'AIzaSyDrTJb35UqU14f7CFjYb0BexL9cTweEyJA',
         styles: [
           {
             feature: `poi`,
@@ -38,10 +36,27 @@ module.exports = {
         ],
         maps: [
           {
-            center: `48.461470,-123.297833`,
-          }
+            center: `Szamotuły, Kopernika 4`,
+            query: `Kopernika`,
+            markers: [
+              {
+                location: `52.6212222721900, 16.5742751761446`,
+                label: 'Żłobek Cypisek, Kopernika',
+              },
+            ],
+            zoom: 18,
+          },
+          {
+            center: `Szamotuły, Łąkowa 9`,
+            query: `Łąkowa`,
+            markers: {
+              location: `52.604950593905144, 16.589948927010074`,
+              label: 'Żłobek Cypisek, Łąkowa',
+            },
+
+            zoom: 18,
+          },
         ],
-        query: `GOOGLE_MAPS_URL_QUERY`,
       },
     },
   ],
