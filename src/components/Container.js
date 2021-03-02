@@ -4,8 +4,8 @@ import PropTypes from 'prop-types';
 
 const Wrapper = styled.div`
   max-width: 1400px;
-  margin: 12rem auto 4rem auto;
-  margin-top: clamp(2rem, 10vw, 12rem);
+  margin: 6rem auto 4rem auto;
+  margin-top: clamp(1rem, 5vw, 6rem);
   background: white;
   background-size: 1500px;
   padding: 5px;

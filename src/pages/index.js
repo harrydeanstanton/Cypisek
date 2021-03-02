@@ -22,7 +22,7 @@ const IndexPage = () => (
     </Banner>
     <Container>
       <Branches />
-      <Services/>
+      <Services />
     </Container>
   </>
 );

@@ -1,13 +1,14 @@
 import React from 'react';
-import { Link } from 'gatsby';
+import ContactForm from '../components/ContactForm';
+import Container from '../components/Container';
+
 // import downloadFile from "../DownloadFiles/S20C-420031811082.pdf"
 
 const Admissions = () => (
-  <>
+  <Container>
     <h1>Rekrutacja</h1>
-    <div />
-    <Link to="/">Go back to the homepage</Link>
-  </>
+    <ContactForm />
+  </Container>
 );
 
 export default Admissions;
