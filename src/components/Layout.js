@@ -7,7 +7,7 @@ import GlobalStyle from '../styles/GlobalStyles';
 
 const SiteBorderStyles = styled.div`
   margin: 12rem auto 4rem auto;
-  margin-top: clamp(2rem, 10vw, 12rem);
+  margin-top: clamp(1rem, 5vw, 2rem);
   padding: 5px;
   padding: clamp(5px, 1vw, 25px);
   @media (max-width: 1100px) {

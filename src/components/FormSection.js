@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 
 const Section = styled.div`
   padding: 10px;
+  padding-left: 25px;
   width: 70%;
   background-color: #eeeeee4d;
   font-size: 16px;
