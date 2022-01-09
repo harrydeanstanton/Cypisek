@@ -1,31 +1,31 @@
-import React from 'react';
-import styled from 'styled-components';
-import ServiceCard from './ServiceCard';
-import Awesome from './AwesomeElement';
-import Bilangual from './BilangualLogo';
-import MrMelody from './MrMelodyLogo';
-import Logosensoryka from './LogsensorykaLogo';
-import Sensoplastyka from './SensoplastykaLogo';
+import React from "react";
+import styled from "styled-components";
+import ServiceCard from "./ServiceCard";
+import Awesome from "./AwesomeElement";
+import Bilangual from "./BilangualLogo";
+import MrMelody from "./MrMelodyLogo";
+import Logosensoryka from "./LogsensorykaLogo";
+import Sensoplastyka from "./SensoplastykaLogo";
 
 const header = {
-  first: 'zajęcia kulinarne',
-  second: 'Zajęcia plastyczne',
-  third: 'Język angielski',
-  fourth: 'Sensoplastyka',
-  fifth: 'Zajęcia muzyczne z j angielskim',
-  sixth: 'Teatr',
-  seventh: 'Logosensoryka',
-  eighth: 'Zajęcia motoryczne',
+  first: "zajęcia kulinarne",
+  second: "Zajęcia plastyczne",
+  third: "Język angielski",
+  fourth: "Sensoplastyka",
+  fifth: "Zajęcia muzyczne z j angielskim",
+  sixth: "Teatr",
+  seventh: "Logosensoryka",
+  eighth: "Zajęcia motoryczne",
 };
 const desc = {
-  first: 'Opis zajęć kulinarnych',
-  second: 'Opis zajęć plastycznych',
-  third: 'Program Dwujęzyczne Dzieci',
-  fourth: 'Opis sensoplastyki',
-  fifth: 'Prowadzone przez Mr Melody',
-  sixth: 'Interaktywne przedstawienia prowadzone przez KULTURKA',
-  seventh: 'Opis logosensoryki',
-  eighth: 'Opis zajęć motorycznych',
+  first: "Opis zajęć kulinarnych",
+  second: "Opis zajęć plastycznych",
+  third: "Program Dwujęzyczne Dzieci",
+  fourth: "Opis sensoplastyki",
+  fifth: "Prowadzone przez Mr Melody",
+  sixth: "Interaktywne przedstawienia prowadzone przez KULTURKA",
+  seventh: "Opis logosensoryki",
+  eighth: "Opis zajęć motorycznych",
 };
 /* const Grid = styled.div`
   display: grid;
@@ -37,7 +37,7 @@ const desc = {
 */
 const CardGroup = styled.div`
   display: flex;
-  justify-content: start;
+
   flex-wrap: wrap;
 `;
 const Header = styled.div`
@@ -47,11 +47,16 @@ const Header = styled.div`
   margin-bottom: 20px;
   color: var(--cypisLightBlue);
 `;
+const ServicesContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+`;
 
 class Services extends React.Component {
   render() {
     return (
-      <>
+      <ServicesContainer>
         <Header>Nauka poprzez zabawę</Header>
         <CardGroup>
           <ServiceCard
@@ -98,7 +103,7 @@ class Services extends React.Component {
             description={desc.fourth}
           />
         </CardGroup>
-      </>
+      </ServicesContainer>
     );
   }
 }

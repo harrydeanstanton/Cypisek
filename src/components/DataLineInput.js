@@ -25,7 +25,7 @@ const DataLine = (props) => (
       type={props.type}
       name={props.name}
       onChange={props.OnChange}
-      onBlur={props.onlur}
+      onBlur={props.onBlur}
       value={props.value}
     />
   </DataLineWrapper>

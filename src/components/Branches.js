@@ -1,12 +1,13 @@
-import React from 'react';
-import styled from 'styled-components';
-import Branch from './Branch';
+import React from "react";
+import styled from "styled-components";
+import Branch from "./Branch";
 
 const BranchWrapper = styled.div`
   height: 400px;
   display: flex;
   justify-content: space-around;
   color: var(--cypisBlue);
+  flex-wrap: wrap;
 `;
 
 const Header = styled.div`

@@ -22,6 +22,7 @@ const Basic = () => (
         ) {
           errors.email = 'Invalid email address';
         }
+        values.child_pesel = '' ? (errors.text = 'Wymagany pesel') : 'Ok';
         return errors;
       }}
       onSubmit={(values, { setSubmitting }) => {
@@ -51,6 +52,7 @@ const Basic = () => (
               onBlur={handleBlur}
               value={values.child_pesel}
             />
+            {errors.text}
             <DataLine
               type="date"
               name="Data urodzenia"
@@ -149,7 +151,7 @@ const Basic = () => (
               onBlur={handleBlur}
               value={values.father_email}
             />
-            {errors.email && touched.email && errors.email}
+            {errors.father_email}
             <DataLineArea
               type="text"
               name="Nazwa i adres zakładu pracy ojca"
@@ -216,7 +218,7 @@ const Basic = () => (
               onBlur={handleBlur}
               value={values.mother_email}
             />
-            {errors.email && touched.email && errors.email}
+            {errors.mother_email}
             <DataLineArea
               type="text"
               name="Nazwa i adres zakładu pracy matki"

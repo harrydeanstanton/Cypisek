@@ -1,7 +1,7 @@
-import React from 'react';
-import styled from 'styled-components';
-import GoogleMap from '../components/GoogleMaps';
-import Branch from '../components/Branch';
+import React from "react";
+import styled from "styled-components";
+import GoogleMap from "../components/GoogleMaps";
+import Branch from "../components/Branch";
 
 const MapWrapper = styled.div`
   width: 400px;
@@ -14,13 +14,14 @@ const centerKopernika = {
   lng: 16.57429126944747,
 };
 const BranchWrapper = styled.div`
-  justify-content:center;
-`
+  justify-content: center;
+`;
 const ContactWrapper = styled.div`
   display: flex;
   justify-content: center;
   width: 100%;
-`
+  flex-wrap: wrap;
+`;
 const Contact = () => (
   <ContactWrapper>
     <BranchWrapper>
